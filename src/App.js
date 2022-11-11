@@ -35,7 +35,14 @@ function App() {
       }
       <button onClick={()=>setFriends2([...friends2, "yayası"])}>Add friend click</button> 
       
-
+      <hr />
+      <br></br> 
+      <h2>Adress</h2>
+      <div>
+        {adress.title} {adress.zip}
+      </div>
+      <br/>
+      <button onClick={()=>setAdress({ ...adress, title: "İzmir",  })}>change adress</button>
       <User 
       name="baal" 
       surname="the lord"
