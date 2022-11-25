@@ -3,6 +3,7 @@ import { useState } from 'react'; // usestate ile değişken yapı içinde aldı
 import User from './components/user';
 import './App.css';
 import Fetch from './components/Fetch';
+import Routerz from './components/Router';
 
 const friends = [
   {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Routerz />
       <Fetch />
       <h1>Hi there {name2}</h1>
       <h2>your age {age2}</h2>
