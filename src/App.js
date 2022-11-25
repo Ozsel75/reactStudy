@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import { useState } from 'react'; // usestate ile değişken yapı içinde aldık 
 import User from './components/user';
 import './App.css';
+import Fetch from './components/Fetch';
 
 const friends = [
   {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <Fetch />
       <h1>Hi there {name2}</h1>
       <h2>your age {age2}</h2>
       <button onClick={()=> setName2("Ash")}>Click</button>
