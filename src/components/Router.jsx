@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Users from "./Users";
+import User2 from "./User2";
 
 export default function Routerz() {
   return (
@@ -21,7 +23,9 @@ export default function Routerz() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/Users" element={<Users />} />
+          <Route path="/User2/:id" element={<User2 />} />
+
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -47,7 +51,7 @@ function Layout() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/Users">Users</Link>
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>
